@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+<div class="col-md-2 bg-dark me-auto text-info text-start">
+    <h4 class="text-center">Menu</h4><br><br>
+
+    <br>
+    {% if not user.is_authenticated %}
+    <a href="{% url 'connexion' %}">
+        <button class="btn btn-outline-info text-light" style="width: 200px">
+            Connexion Client
+        </button>
+     </a>
+    <br><br>
+    {% endif %}
+
+     <a href="{% url 'index' %}">
+        <button class="btn btn-outline-info text-light" style="width: 200px">
+            HOME
+        </button>
+     </a>
+    <br><br>
+    <a href="{% url 'a_propos' %}">
+        <button class="btn btn-outline-info text-light" style="width: 200px">
+            A propos
+        </button>
+     </a>
+    <br><br>
+    <a href="{% url 'graphique' %}">
+        <button class="btn btn-outline-info text-light" style="width: 200px">
+            Graphique
+        </button>
+     </a>
+    <br><br>
+    <a href="admin/">
+        <button class="btn btn-outline-info text-light" style="width: 200px">
+            Connexion Admin
+        </button>
+     </a>
+    <br><br>
+    <br><br><br>
+</div>
+
+    <div class="col-md-10 text-light ms-auto">
+        <div class="bg-secondary row"><h3 class=" text-dark text-center">Espace Administrateur</h3></div>
+        <h3 class="text-primary">{{ Bienvenu }}</h3>
+
+        {% block content %}
+        {% endblock %}
+
+</div>
+    </div>
+
+</div>
+    </div>
+</body>
+</html>

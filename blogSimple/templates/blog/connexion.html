@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="bg-dark">
+    <a href=""><h5 class="text-end text-light">Welcome</h5></a>
+    <a href=""><h6 class="text-info text-start">le {{ heure }}</h6></a>
+</div>
+<br><br><br>
+
+<div class="row">
+<div class="col-md-4 ms-auto text-center">
+    <img class="img-fluid col-md-3" src="{% static 'image/elite.png' %}" alt="logo">
+    <img class="img-fluid col-md-3" src="{% static 'image/KP_2.png' %}" alt="logo"><br>
+    <img class="img-fluid col-md-3" src="{% static 'image/genius.png' %}" alt="logo">
+    <img class="img-fluid col-md-3" src="{% static 'image/eva.png' %}" alt="logo">
+</div>
+<div class="col-md-4 me-auto text-dark" style="border:2px solid purple;">
+    <br><br>
+    <h4 class="text-center">CONNEXION</h4>
+
+<form action="" method="">
+    <label for="username">Nom</label>
+    <input class="form-control" type="text" name="username" placeholder="NOm" style="widht:50%;">
+    <label for="password">Mot de passe</label>
+    <input class="form-control" type="password" name="password" placeholder="NOm" style="widht:50%;"><br>
+
+    <button class="btn btn-outline-primary text-dark" type="submit" style="widht:50%;">
+        S'inscrire
+    </button>
+</form>
+</div>
+</div>
+</body>
+</html>

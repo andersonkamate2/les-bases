@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+        <!-- CREATION CONTENU DE LA PAGE -->
+        {{ sauti }}
+        <div class="">
+            <h4 class="text-dark text-center"><u> IDENTIFICATION DES ETUDIANTS EN RDC </u></h4>
+            <div class="col-md-8 mx-auto form-group text-dark">
+                <form method="POST">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="post_nom">Post Nom</label>
+                    <input class="form-control" type="text" name="post_nom" placeholder="post_nom" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="post_nom">Post Nom</label>
+                    <input class="form-control" type="text" name="post_nom" placeholder="post_nom" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="post_nom">Post Nom</label>
+                    <input class="form-control" type="text" name="post_nom" placeholder="post_nom" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="post_nom">Post Nom</label>
+                    <input class="form-control" type="text" name="post_nom" placeholder="post_nom" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px">
+                    <label for="nom">Nom</label>
+                    <input class="form-control" type="text" name="nom" placeholder="NOm" style="height:25px"><br>
+                    <button class="btn btn-outline-primary text-dark" type="submit" style="width:25%; margin-left:35%">
+                        Envoyer
+                    </button>
+                </form>
+            </div><br>
+
+            <div class="col-md-8 mx-auto bg-dark">
+                <h4 class="text-info text-center">Tous les etudiant dans la base de données</h4><br>
+                {% for etudiant in etudiants %}
+                    <h4>{{ etudiant.nom }}</h4>
+                    <h4>{{ etudiant.post_nom }}</h4>
+                    <h4>{{ etudiant.sexe }}</h4>
+                    <h6>Adresse: {{ etudiant.province }} /{{ etudiant.ville }} /{{ etudiant.commune }} /
+                        {{ etudiant.Quartier }} /{{ etudiant.Avenu }} / N°{{ etudiant.numero }}</h6>
+                <h1 class="text-info">_____________________________________</h1>
+                {% endfor %}
+            </div>
+
+        </div>
+{% endblock %}
