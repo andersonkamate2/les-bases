@@ -4,8 +4,8 @@ from blogSimple.views import index, connexion, about, graphique
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', connexion, name='index'),
-    path('connexion/', index, name='connexion'),
-    path('about/', about, name='a_propos'),
+    path('connexion/', connexion, name='index'),
+    path('about/', index, name='connexion'),
+    path('', about, name='a_propos'),
     path('graphique/', graphique, name='graphique'),
 ]
